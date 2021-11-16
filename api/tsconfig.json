@@ -9,6 +9,7 @@
         "strict": true,
         "noFallthroughCasesInSwitch": true,
         "noImplicitReturns": true,
+        "noImplicitAny": false,
         "noEmitOnError": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
