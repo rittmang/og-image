@@ -10,6 +10,7 @@ import { ParsedRequest } from './types';
 const hnb = readFileSync(`${__dirname}/../_fonts/HelveticaNeueBold.woff`).toString('base64');
 const logo = readFileSync(`${__dirname}/../logo.png`).toString('base64');
 
+
 function getCss(coverimage:string[]) {
     // let background = 'white';
     // let foreground = 'black';
@@ -42,12 +43,16 @@ function getCss(coverimage:string[]) {
 
     .title {
         position: absolute;
-        left: 5%;
-        top: 20%;
-        font-size: 7em;
+        left: 75px;
+        bottom: 470px;
+        /* font-size: 2.5vw; */
+        width:65%;
         text-transform: uppercase;
         color: beige;
         font-family: 'Helvetica Neue Bold';
+        overflow:hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
     }
 
     .sub {
@@ -135,6 +140,18 @@ export function getHtml(parsedReq: ParsedRequest) {
             <div class="logo"></div>
         </div>
     </body>
+    <script>
+        const getFontSize=(textLength)=> {
+            const baseSize=16;
+            if(textLength>=baseSize){
+                textLength=baseSize-2;
+            }
+            const fontSize=(baseSize-textLength/1.15)/1.2
+            return fontSize+"em"
+        }
+        const title=document.querySelector('.container .title');
+        title.style.fontSize=getFontSize(title.textContent.length);
+    </script>
 </html>`;
 }
 
