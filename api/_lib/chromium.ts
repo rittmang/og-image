@@ -17,7 +17,7 @@ export async function getScreenshot(html: string, type: FileType, isDev: boolean
     const page = await getPage(isDev);
     await page.setViewport({ width: 1280, height: 720 });
     await page.setContent(html,{
-        waitUntil:'networkidle0'
+        waitUntil:'networkidle2'
     });
     const file = await page.screenshot({ type });
     return file;
