@@ -45,8 +45,8 @@ function getCss(coverimage:string[]) {
         position: absolute;
         left: 75px;
         bottom: 470px;
-        /* font-size: 2.5vw; */
-        width:65%;
+        font-size: 3.35vw; 
+        width:75%;
         text-transform: uppercase;
         color: beige;
         font-family: 'Helvetica Neue Bold';
@@ -140,18 +140,6 @@ export function getHtml(parsedReq: ParsedRequest) {
             <div class="logo"></div>
         </div>
     </body>
-    <script>
-        const getFontSize=(textLength)=> {
-            const baseSize=16;
-            if(textLength>=baseSize){
-                textLength=baseSize-2;
-            }
-            const fontSize=(baseSize-textLength/1.15)/1.2
-            return fontSize+"em"
-        }
-        const title=document.querySelector('.container .title');
-        title.style.fontSize=getFontSize(title.textContent.length);
-    </script>
 </html>`;
 }
 

@@ -49,7 +49,7 @@ export function parseRequest(req: IncomingMessage) {
         coverimage: getArray(coverimage),
     };
     parsedRequest.coverimage = (parsedRequest.coverimage);//getDefaultImage(parsedRequest.coverimage);
-    console.log(parsedRequest.coverimage);
+    // console.log(parsedRequest.coverimage);
     return parsedRequest;
 }
 
