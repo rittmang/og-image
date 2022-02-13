@@ -57,7 +57,7 @@ function getCss(coverimage:string[]) {
 
     .sub {
         position: absolute;
-        left: 5.5%;
+        left: 5.9%;
         top: 47%;
         right: 45%;
         font-size: 1.5em;
@@ -77,7 +77,7 @@ function getCss(coverimage:string[]) {
 
     .ml-4,
     .mx-4 {
-        left: 21.5%;
+        left: 18.1%;
     }
 
     .badge {
@@ -86,20 +86,21 @@ function getCss(coverimage:string[]) {
         display: inline-block;
         padding: 0.25em 0.4em;
         font-size: 1.5em;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: monospace, monospace;
         font-weight: 700;
         line-height: 1;
         text-align: center;
         white-space: nowrap;
         vertical-align: baseline;
-        border-radius: 0.25rem;
+        border-radius: 0.45rem;
     }
 
     .badge-outline {
-        color: #fff;
-        background-color: transparent;
+        color: #4d2407;
+        background-color:#ffd700;
         outline-style: solid;
-        outline-width: 1px;
+        outline-width: 0px;
+        outline-color: #c99200;
     }
 
     .logo {
