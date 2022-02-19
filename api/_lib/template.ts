@@ -36,7 +36,7 @@ function getCss(coverimage:string[]) {
 
     .cover {
         opacity: 100%;
-        background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('${coverimage}');
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('${coverimage}');
         width: 1280px;
         height: 720px;
     }
