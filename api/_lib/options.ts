@@ -9,6 +9,7 @@ interface Options {
     args: string[];
     executablePath: string;
     headless: boolean;
+    ignoreHTTPSErrors:boolean;
 }
 
 export async function getOptions(isDev: boolean) {
@@ -17,13 +18,15 @@ export async function getOptions(isDev: boolean) {
         options = {
             args: [],
             executablePath: exePath,
-            headless: true
+            headless: true,
+            ignoreHTTPSErrors:true
         };
     } else {
         options = {
             args: chrome.args,
             executablePath: await chrome.executablePath,
             headless: chrome.headless,
+            ignoreHTTPSErrors:true
         };
     }
     return options;
